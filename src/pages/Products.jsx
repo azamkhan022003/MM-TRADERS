@@ -4,26 +4,19 @@ import ProductCard from "../components/common/ProductCard";
 import "./Products.css";
 
 function Products() {
-
   const [search, setSearch] = useState("");
 
-  const filteredProducts = products.filter(product =>
-    product.name.toLowerCase().includes(search.toLowerCase())
+  const filteredProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(search.toLowerCase()),
   );
 
   return (
-
     <section className="products-page">
-
       <div className="container">
-
         <div className="products-header">
-
           <h1>Our Products</h1>
 
-          <p>
-            Explore our complete range of premium Mild Steel products.
-          </p>
+          <p>Explore our complete range of premium Mild Steel products.</p>
 
           <input
             type="text"
@@ -31,28 +24,16 @@ function Products() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
-
         </div>
 
         <div className="products-grid">
-
-          {filteredProducts.map(product => (
-
-            <ProductCard
-              key={product.id}
-              product={product}
-            />
-
+          {filteredProducts.map((product) => (
+            <ProductCard key={product.id} product={product} />
           ))}
-
         </div>
-
       </div>
-
     </section>
-
   );
-
 }
 
 export default Products;

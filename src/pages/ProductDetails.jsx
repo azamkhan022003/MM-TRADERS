@@ -21,39 +21,28 @@ function ProductDetails() {
 
   return (
     <section className="product-details">
-
       <div className="container">
-
         <div className="details-grid">
-
           {/* Left Side */}
 
           <div className="details-image">
-
             <img src={product.image} alt={product.name} />
-
           </div>
 
           {/* Right Side */}
 
           <div className="details-content">
-
-            <span className="product-tag">
-              Premium Steel Product
-            </span>
+            <span className="product-tag">Premium Steel Product</span>
 
             <h1>{product.name}</h1>
 
             <p>{product.description}</p>
 
             <div className="specifications">
-
               <h3>Specifications</h3>
 
               <table>
-
                 <tbody>
-
                   <tr>
                     <td>Grade</td>
                     <td>{product.grade}</td>
@@ -73,37 +62,34 @@ function ProductDetails() {
                     <td>Delivery</td>
                     <td>Across India</td>
                   </tr>
-
                 </tbody>
-
               </table>
-
             </div>
 
             <div className="features">
-
               <h3>Features</h3>
 
               <ul>
+                <li>
+                  <FaCheckCircle /> High Strength
+                </li>
 
-                <li><FaCheckCircle /> High Strength</li>
+                <li>
+                  <FaCheckCircle /> Corrosion Resistant
+                </li>
 
-                <li><FaCheckCircle /> Corrosion Resistant</li>
+                <li>
+                  <FaCheckCircle /> Industrial Grade
+                </li>
 
-                <li><FaCheckCircle /> Industrial Grade</li>
-
-                <li><FaCheckCircle /> Quality Tested</li>
-
+                <li>
+                  <FaCheckCircle /> Quality Tested
+                </li>
               </ul>
-
             </div>
 
             <div className="details-buttons">
-
-              <a
-                href="tel:+918103326129"
-                className="call-btn"
-              >
+              <a href="tel:+918103326129" className="call-btn">
                 <FaPhoneAlt />
                 Call Now
               </a>
@@ -117,15 +103,10 @@ function ProductDetails() {
                 <FaWhatsapp />
                 WhatsApp Quote
               </a>
-
             </div>
-
           </div>
-
         </div>
-
       </div>
-
     </section>
   );
 }
