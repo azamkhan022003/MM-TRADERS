@@ -1,0 +1,170 @@
+.cta-section{
+    padding:100px 0;
+    background:#030712;
+}
+
+.cta-box{
+
+    background:linear-gradient(135deg,#2563EB,#1D4ED8);
+
+    border-radius:20px;
+
+    padding:70px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:40px;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.cta-box::before{
+
+content:"";
+
+position:absolute;
+
+width:320px;
+
+height:320px;
+
+background:rgba(255,255,255,.08);
+
+border-radius:50%;
+
+right:-80px;
+
+top:-80px;
+
+}
+
+.cta-content{
+
+position:relative;
+
+z-index:2;
+
+max-width:650px;
+
+}
+
+.cta-content span{
+
+font-weight:700;
+
+letter-spacing:2px;
+
+}
+
+.cta-content h2{
+
+font-size:46px;
+
+margin:18px 0;
+
+line-height:1.2;
+
+}
+
+.cta-content p{
+
+font-size:18px;
+
+line-height:30px;
+
+color:#E5E7EB;
+
+}
+
+.cta-buttons{
+
+display:flex;
+
+flex-direction:column;
+
+gap:18px;
+
+position:relative;
+
+z-index:2;
+
+}
+
+.call-btn,
+.whatsapp-btn,
+.contact-btn{
+
+padding:16px 30px;
+
+background:white;
+
+color:#2563EB;
+
+border-radius:10px;
+
+font-weight:700;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:12px;
+
+transition:.3s;
+
+min-width:220px;
+
+}
+
+.call-btn:hover,
+.whatsapp-btn:hover,
+.contact-btn:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 15px 30px rgba(0,0,0,.25);
+
+}
+
+@media(max-width:992px){
+
+.cta-box{
+
+flex-direction:column;
+
+text-align:center;
+
+padding:50px 30px;
+
+}
+
+.cta-content h2{
+
+font-size:34px;
+
+}
+
+.cta-buttons{
+
+width:100%;
+
+}
+
+.call-btn,
+.whatsapp-btn,
+.contact-btn{
+
+width:100%;
+
+}
+
+}

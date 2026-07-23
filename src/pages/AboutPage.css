@@ -1,0 +1,41 @@
+.about-page{
+    min-height:100vh;
+    background:#05070D;
+    padding:120px 80px;
+}
+
+.about-content{
+    max-width:900px;
+    margin:auto;
+}
+
+.about-content h1{
+    color:#0D6EFD;
+    font-size:48px;
+    margin-bottom:30px;
+}
+
+.about-content p{
+    color:#ddd;
+    line-height:32px;
+    margin-bottom:25px;
+}
+
+.about-boxes{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:60px;
+}
+
+.box{
+    background:#111826;
+    padding:40px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.box h2{
+    color:#0D6EFD;
+    font-size:40px;
+}
