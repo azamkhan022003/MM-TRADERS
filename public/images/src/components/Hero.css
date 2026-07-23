@@ -1,0 +1,177 @@
+.hero {
+  position: relative;
+  background: #030712;
+  padding: 130px 0 80px;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      rgba(3,7,18,.88),
+      rgba(3,7,18,.88)
+    );
+}
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 40px;
+
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* LEFT */
+
+.hero-content{
+  text-align:left;
+}
+
+.hero-tag{
+  display:inline-block;
+  padding:10px 22px;
+  border-radius:30px;
+  background:#2563eb;
+  color:#fff;
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:1px;
+  margin-bottom:25px;
+}
+
+.hero-content h1{
+  color:#fff;
+  font-size:62px;
+  line-height:1.1;
+  font-weight:800;
+  margin-bottom:25px;
+}
+
+.hero-content h1 span{
+  display:block;
+  color:#3b82f6;
+}
+
+.hero-content p{
+  color:#cbd5e1;
+  font-size:18px;
+  line-height:1.8;
+  max-width:620px;
+  margin-bottom:35px;
+}
+
+/* LIST */
+
+.hero-list{
+  list-style:none;
+  padding:0;
+  margin:0 0 40px;
+
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.hero-list li{
+  color:#fff;
+  font-size:17px;
+  font-weight:500;
+}
+
+/* BUTTONS */
+
+.hero-buttons{
+  display:flex;
+  gap:18px;
+}
+
+.btn-primary{
+  background:#2563eb;
+  color:#fff;
+  padding:16px 34px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:700;
+  transition:.3s;
+}
+
+.btn-primary:hover{
+  background:#1d4ed8;
+}
+
+.btn-secondary{
+  border:2px solid #2563eb;
+  color:#fff;
+  padding:16px 34px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:700;
+  transition:.3s;
+}
+
+.btn-secondary:hover{
+  background:#2563eb;
+}
+
+/* RIGHT */
+
+.hero-image{
+  display:flex;
+  justify-content:center;
+}
+
+.hero-image img{
+  width:100%;
+  max-width:560px;
+  height:560px;
+  object-fit:cover;
+
+  border-radius:24px;
+
+  box-shadow:
+  0 20px 60px rgba(0,0,0,.45);
+
+  border:1px solid rgba(255,255,255,.08);
+}
+
+/* MOBILE */
+
+@media(max-width:992px){
+
+.hero{
+  padding-top:110px;
+}
+
+.hero-container{
+  grid-template-columns:1fr;
+  text-align:center;
+  gap:50px;
+}
+
+.hero-content{
+  text-align:center;
+}
+
+.hero-content p{
+  margin:auto auto 35px;
+}
+
+.hero-list{
+  grid-template-columns:1fr;
+}
+
+.hero-buttons{
+  justify-content:center;
+}
+
+.hero-image img{
+  height:auto;
+}
+}

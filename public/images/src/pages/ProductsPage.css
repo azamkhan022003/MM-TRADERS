@@ -1,0 +1,45 @@
+.products-page{
+    background:#05070D;
+    min-height:100vh;
+    padding:120px 80px;
+}
+
+.page-header{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.page-header h1{
+    font-size:48px;
+    color:#0D6EFD;
+}
+
+.page-header p{
+    color:#ccc;
+    margin-top:15px;
+}
+
+.search-box{
+    max-width:600px;
+    margin:40px auto;
+}
+
+.search-box input{
+    width:100%;
+    padding:16px;
+    border-radius:8px;
+    border:1px solid #333;
+    background:#111826;
+    color:white;
+    font-size:16px;
+}
+
+.products-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.product-link{
+    text-decoration:none;
+}

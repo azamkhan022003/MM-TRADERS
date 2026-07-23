@@ -1,0 +1,69 @@
+.inquiry-page{
+    min-height:100vh;
+    background:#030712;
+    color:white;
+    padding:120px 20px 80px;
+}
+
+.inquiry-page h1{
+    text-align:center;
+    color:#2563EB;
+    margin-bottom:40px;
+    font-size:42px;
+}
+
+.inquiry-page form{
+    max-width:700px;
+    margin:auto;
+    background:#111827;
+    padding:40px;
+    border-radius:12px;
+}
+
+.inquiry-page input,
+.inquiry-page select,
+.inquiry-page textarea{
+
+width:100%;
+padding:15px;
+margin-bottom:20px;
+
+background:#1F2937;
+
+border:1px solid #374151;
+
+color:white;
+
+border-radius:8px;
+
+font-size:16px;
+
+}
+
+.inquiry-page button{
+
+width:100%;
+
+padding:16px;
+
+background:#2563EB;
+
+color:white;
+
+border:none;
+
+border-radius:8px;
+
+font-size:18px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.inquiry-page button:hover{
+
+background:#1D4ED8;
+
+}
