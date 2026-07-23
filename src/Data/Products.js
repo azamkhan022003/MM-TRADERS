@@ -1,63 +1,52 @@
-import msSteel from "../assets/images/ms-steel.jpg";
-import msStructure from "../assets/images/ms-structure.jpg";
-import msPipe from "../assets/images/ms-pipe.jpg";
-import msFlat from "../assets/images/ms-flat.jpg";
-import msAngle from "../assets/images/ms-angle.jpg";
-import msChannel from "../assets/images/ms-channel.jpg";
-import basePlate from "../assets/images/base-plate.jpg";
-import profileSheet from "../assets/images/profile-sheet.jpg";
-
 const products = [
   {
     id: 1,
     name: "MS Steel",
-    image: msSteel,
-    description: "Premium quality Mild Steel for industrial and construction applications."
+    image: "/images/ms-steel.jpg",
+    description: "Premium quality Mild Steel available in all grades.",
+    sizes: "6mm - 100mm",
+    application: "Construction, Fabrication"
   },
   {
     id: 2,
     name: "MS Structure",
-    image: msStructure,
-    description: "Heavy duty steel structures."
+    image: "/images/ms-structure.jpg",
+    description: "Strong MS Structural Steel.",
+    sizes: "All Sizes",
+    application: "Industrial Buildings"
   },
   {
     id: 3,
     name: "MS Pipe",
-    image: msPipe,
-    description: "Industrial quality MS Pipes."
+    image: "/images/ms-pipe.jpg",
+    description: "Round MS Pipe.",
+    sizes: "1/2 inch - 12 inch",
+    application: "Water Supply"
   },
   {
     id: 4,
     name: "MS Flat",
-    image: msFlat,
-    description: "Premium MS Flat bars."
+    image: "/images/ms-flat.jpg",
+    description: "Premium Flat Bars.",
+    sizes: "20mm - 150mm",
+    application: "Fabrication"
   },
   {
     id: 5,
     name: "MS Angle",
-    image: msAngle,
-    description: "Strong and durable MS Angles."
+    image: "/images/ms-angle.jpg",
+    description: "High strength MS Angle.",
+    sizes: "25x25 - 150x150",
+    application: "Frames"
   },
   {
     id: 6,
     name: "MS Channel",
-    image: msChannel,
-    description: "Industrial MS Channels."
-  },
-  {
-    id: 7,
-    name: "Base Plate",
-    image: basePlate,
-    description: "Heavy-duty steel base plates."
-  },
-  {
-    id: 8,
-    name: "Profile Sheet",
-    image: profileSheet,
-    description: "Color coated roofing profile sheets."
+    image: "/images/ms-channel.jpg",
+    description: "ISMC Channels.",
+    sizes: "75mm - 400mm",
+    application: "Structural Support"
   }
 ];
 
 export default products;
-
-
