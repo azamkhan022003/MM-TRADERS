@@ -9,7 +9,8 @@ const [form,setForm]=useState({
 name:"",
 email:"",
 phone:"",
-message:""
+message:"",
+gst:"",
 
 });
 
@@ -50,7 +51,8 @@ setForm({
 name:"",
 email:"",
 phone:"",
-message:""
+message:"",
+gst:"",
 
 });
 
@@ -77,6 +79,10 @@ return(
 <p>📧 mmtraders.mp@gmail.com </p>
 
 <p>📍 Gwalior, Madhya Pradesh</p>
+
+<p className="gst-number">
+    <strong>GSTIN</strong>23NZQPK1479H1ZQ
+</p>
 
 </div>
 

@@ -89,6 +89,10 @@ function Footer() {
             Gwalior, Madhya Pradesh
           </p>
 
+              <p className="footer-gst">
+            <strong>GSTIN</strong>23NZQPK1479H1ZQ
+          </p>
+
         </div>
 
       </div>

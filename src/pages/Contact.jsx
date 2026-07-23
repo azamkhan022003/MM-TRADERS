@@ -64,7 +64,14 @@ function Contact() {
                   Gwalior, Madhya Pradesh,
                   India
                 </p>
+
+               <p className="gst-number">
+                <strong>GSTIN</strong>23NZQPK1479H1ZQ
+               </p>
+
               </div>
+
+              
 
             </div>
 
