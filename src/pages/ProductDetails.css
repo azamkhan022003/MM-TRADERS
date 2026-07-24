@@ -1,136 +1,180 @@
-.product-details{
-    background:#030712;
-    min-height:100vh;
-    padding:140px 0 100px;
+.product-details {
+  background: #030712;
+  min-height: 100vh;
+  padding: 140px 20px 100px;
 }
 
-.details-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
+.product-details .container {
+  max-width: 1240px;
+  margin: 0 auto;
 }
 
-.details-image img{
-    width:100%;
-    border-radius:18px;
-    background:#111827;
-    padding:20px;
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
 }
 
-.product-tag{
-    display:inline-block;
-    background:#2563EB;
-    color:#fff;
-    padding:8px 16px;
-    border-radius:30px;
-    margin-bottom:20px;
+.details-image {
+  background: #111827;
+  border-radius: 20px;
+  padding: 15px;
+  border: 1px solid #1F2937;
+  overflow: hidden;
 }
 
-.details-content h1{
-    font-size:48px;
-    margin-bottom:20px;
+.details-image img {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
 }
 
-.details-content p{
-    color:#94A3B8;
-    line-height:30px;
-    margin-bottom:30px;
+.product-tag {
+  display: inline-block;
+  background: #2563EB;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
-.specifications{
-    margin:30px 0;
+.details-content h1 {
+  font-size: 42px;
+  color: #FFFFFF;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
-.specifications table{
-    width:100%;
-    border-collapse:collapse;
+.details-content p {
+  color: #9CA3AF;
+  line-height: 1.8;
+  font-size: 16px;
+  margin-bottom: 30px;
 }
 
-.specifications td{
-    padding:14px;
-    border:1px solid #1F2937;
+.specifications {
+  margin: 30px 0;
 }
 
-.specifications td:first-child{
-    color:#2563EB;
-    font-weight:600;
+.specifications h3,
+.features h3 {
+  color: #FFFFFF;
+  font-size: 20px;
+  margin-bottom: 15px;
 }
 
-.features{
-    margin:35px 0;
+.specifications table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #111827;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.features ul{
-    list-style:none;
+.specifications td {
+  padding: 14px 18px;
+  border: 1px solid #1F2937;
+  color: #E5E7EB;
 }
 
-.features li{
-    margin:15px 0;
-    display:flex;
-    gap:10px;
-    align-items:center;
-    color:#E5E7EB;
+.specifications td:first-child {
+  color: #2563EB;
+  font-weight: 600;
+  width: 40%;
 }
 
-.features svg{
-    color:#2563EB;
+.features {
+  margin: 35px 0;
 }
 
-.details-buttons{
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
+.features ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.features li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #E5E7EB;
+  font-size: 15px;
+}
+
+.features svg {
+  color: #2563EB;
+}
+
+.details-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .call-btn,
-.whatsapp-btn{
-    padding:15px 28px;
-    border-radius:10px;
-    display:flex;
-    align-items:center;
-    gap:10px;
-    text-decoration:none;
-    font-weight:600;
+.whatsapp-btn {
+  padding: 15px 28px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: opacity 0.3s ease;
 }
 
-.call-btn{
-    background:#2563EB;
-    color:white;
+.call-btn {
+  background: #2563EB;
+  color: white;
 }
 
-.whatsapp-btn{
-    background:#16A34A;
-    color:white;
+.whatsapp-btn {
+  background: #16A34A;
+  color: white;
 }
 
-.not-found{
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    background:#030712;
-    color:white;
+.call-btn:hover,
+.whatsapp-btn:hover {
+  opacity: 0.9;
 }
 
-.back-btn{
-    margin-top:20px;
-    padding:12px 24px;
-    background:#2563EB;
-    color:white;
-    border-radius:8px;
-    text-decoration:none;
+.not-found {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #030712;
+  color: white;
 }
 
-@media(max-width:992px){
-
-.details-grid{
-    grid-template-columns:1fr;
+.back-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #2563EB;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
 }
 
-.details-content h1{
-    font-size:36px;
-}
+@media (max-width: 992px) {
+  .details-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 
+  .details-content h1 {
+    font-size: 32px;
+  }
+
+  .features ul {
+    grid-template-columns: 1fr;
+  }
 }

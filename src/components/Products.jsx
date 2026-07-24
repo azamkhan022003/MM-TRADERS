@@ -1,33 +1,28 @@
-import "./Products.css";
-import { Link } from "react-router-dom";
 import products from "../data/products";
+import ProductCard from "./common/ProductCard";
+import "./Products.css";
 
 function Products() {
   return (
-    <section className="products">
-      <h2>OUR PRODUCTS</h2>
+    <section className="products-section">
+      <div className="container">
+        <div className="section-heading">
+          <span>OUR PRODUCTS</span>
+          <h2>Explore Our Product Range</h2>
+          <p>
+            High-grade Mild Steel products engineered for strength, durability,
+            and industrial performance.
+          </p>
+        </div>
 
-      <div className="product-grid">
-        {products.map((item) => (
-          <div className="product-card" key={item.id}>
-            <img src={item.image} alt={item.name} />
-
-            <h3>{item.name}</h3>
-
-            <p>
-              Premium quality {item.name} available in different sizes and
-              specifications.
-            </p>
-
-            <Link to={`/product/${item.id}`}>
-              <button>View Details</button>
-            </Link>
-          </div>
-        ))}
+        <div className="products-grid">
+          {products.map((item) => (
+            <ProductCard key={item.id} product={item} />
+          ))}
+        </div>
       </div>
     </section>
   );
 }
 
 export default Products;
-
