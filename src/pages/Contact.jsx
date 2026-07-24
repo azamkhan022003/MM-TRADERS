@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   FaPhoneAlt,
   FaEnvelope,
@@ -8,6 +9,27 @@ import {
 import "./Contact.css";
 
 function Contact() {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    product: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const text = `Hello MM Traders,\n\nName: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\nProduct: ${form.product}\nMessage: ${form.message}`;
+    window.open(
+      `https://wa.me/918103326129?text=${encodeURIComponent(text)}`,
+      "_blank"
+    );
+  };
+
   return (
     <section className="contact-page">
 
@@ -89,31 +111,48 @@ function Contact() {
 
           {/* Contact Form */}
 
-          <form className="contact-form">
+          <form className="contact-form" onSubmit={handleSubmit}>
 
             <input
               type="text"
+              name="name"
               placeholder="Your Name"
+              value={form.name}
+              onChange={handleChange}
+              required
             />
 
             <input
               type="email"
+              name="email"
               placeholder="Email Address"
+              value={form.email}
+              onChange={handleChange}
             />
 
             <input
               type="tel"
+              name="phone"
               placeholder="Phone Number"
+              value={form.phone}
+              onChange={handleChange}
+              required
             />
 
             <input
               type="text"
+              name="product"
               placeholder="Product Name"
+              value={form.product}
+              onChange={handleChange}
             />
 
             <textarea
+              name="message"
               rows="6"
               placeholder="Write your message..."
+              value={form.message}
+              onChange={handleChange}
             ></textarea>
 
             <button type="submit">
@@ -130,4 +169,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default Contact;

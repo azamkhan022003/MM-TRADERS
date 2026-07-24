@@ -1,6 +1,5 @@
 import "./FeaturedProduct.css";
 import productImg from "../../assets/images/ms-steel.jpg";
-import products from "../../data/products";
 
 
 function FeaturedProduct() {

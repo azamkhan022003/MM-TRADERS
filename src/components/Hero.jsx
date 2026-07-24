@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Hero.css";
 import heroImage from "../assets/images/ms-steel.jpg"; // Use a working image
-import HeroStats from "./HeroStats";
 
 function Hero() {
   return (
@@ -55,12 +54,6 @@ function Hero() {
           <img src={heroImage} alt="Steel Products" />
         </div>
         </div>
-        <div className="container">
-                                                                                                    
-
-      </div>
-
-     
 
     </section>
   );

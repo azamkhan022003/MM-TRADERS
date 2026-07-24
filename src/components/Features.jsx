@@ -1,61 +1,41 @@
-import "./Footer.css";
+import { FaAward, FaTruck, FaUserCheck, FaPhoneAlt } from "react-icons/fa";
+import "./Features.css";
 
-function Footer() {
+const featureList = [
+  {
+    icon: <FaAward />,
+    title: "ISI Certified",
+    text: "All our steel products meet ISI standards for quality assurance.",
+  },
+  {
+    icon: <FaTruck />,
+    title: "Fast Delivery",
+    text: "Quick and reliable delivery across Madhya Pradesh and India.",
+  },
+  {
+    icon: <FaUserCheck />,
+    title: "Trusted Supplier",
+    text: "Serving 150+ happy clients across construction and industrial sectors.",
+  },
+  {
+    icon: <FaPhoneAlt />,
+    title: "24×7 Support",
+    text: "Our team is always available for quotations and order assistance.",
+  },
+];
+
+function Features() {
   return (
-    <footer className="footer">
-
-      <div className="footer-grid">
-
-        <div>
-
-          <h2>MM TRADERS</h2>
-
-          <p>
-            Premium Supplier of Mild Steel Products.
-          </p>
-
+    <section className="features">
+      {featureList.map((item, index) => (
+        <div className="feature-card" key={index}>
+          <span>{item.icon}</span>
+          <h3>{item.title}</h3>
+          <p>{item.text}</p>
         </div>
-
-        <div>
-
-          <h3>Products</h3>
-
-          <p>MS Steel</p>
-
-          <p>MS Pipe</p>
-
-          <p>MS Angle</p>
-
-          <p>MS Channel</p>
-
-        </div>
-
-        <div>
-
-          <h3>Contact</h3>
-
-          <p>📞 +91 8103326129</p>
-
-          <p>mmtraders.mp@gmail.com</p>
-
-          <p>Gwalior, Madhya Pradesh</p>
-
-      
-
-        </div>
-
-      </div>
-
-      <hr />
-
-      <p className="copyright">
-
-        © 2026 MM Traders. All Rights Reserved.
-
-      </p>
-
-    </footer>
+      ))}
+    </section>
   );
 }
 
-export default Footer;
+export default Features;
