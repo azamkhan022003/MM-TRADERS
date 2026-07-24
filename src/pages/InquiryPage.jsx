@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import "./InquiryPage.css";
 
 function InquiryPage() {
@@ -53,86 +55,90 @@ ${form.message}
   };
 
   return (
-    <section className="inquiry-page">
+    <>
+      <Navbar />
+      <section className="inquiry-page">
 
-      <h1>Request a Quotation</h1>
+        <h1>Request a Quotation</h1>
 
-      <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
 
-        <input
-          type="text"
-          name="name"
-          placeholder="Full Name"
-          onChange={handleChange}
-          required
-        />
+          <input
+            type="text"
+            name="name"
+            placeholder="Full Name"
+            onChange={handleChange}
+            required
+          />
 
-        <input
-          type="text"
-          name="company"
-          placeholder="Company Name"
-          onChange={handleChange}
-        />
+          <input
+            type="text"
+            name="company"
+            placeholder="Company Name"
+            onChange={handleChange}
+          />
 
-        <input
-          type="text"
-          name="phone"
-          placeholder="Mobile Number"
-          onChange={handleChange}
-          required
-        />
+          <input
+            type="text"
+            name="phone"
+            placeholder="Mobile Number"
+            onChange={handleChange}
+            required
+          />
 
-        <input
-          type="email"
-          name="email"
-          placeholder="Email Address"
-          onChange={handleChange}
-        />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            onChange={handleChange}
+          />
 
-        <input
-          type="text"
-          name="city"
-          placeholder="City"
-          onChange={handleChange}
-        />
+          <input
+            type="text"
+            name="city"
+            placeholder="City"
+            onChange={handleChange}
+          />
 
-        <select
-          name="product"
-          onChange={handleChange}
-          required
-        >
-          <option value="">Select Product</option>
-          <option>MS Steel</option>
-          <option>MS Structure</option>
-          <option>MS Pipe</option>
-          <option>MS Flat</option>
-          <option>MS Angle</option>
-          <option>MS Channel</option>
-          <option>Base Plate</option>
-          <option>Profile Sheet</option>
-        </select>
+          <select
+            name="product"
+            onChange={handleChange}
+            required
+          >
+            <option value="">Select Product</option>
+            <option>MS Steel</option>
+            <option>MS Structure</option>
+            <option>MS Pipe</option>
+            <option>MS Flat</option>
+            <option>MS Angle</option>
+            <option>MS Channel</option>
+            <option>Base Plate</option>
+            <option>Profile Sheet</option>
+          </select>
 
-        <input
-          type="text"
-          name="quantity"
-          placeholder="Required Quantity"
-          onChange={handleChange}
-        />
+          <input
+            type="text"
+            name="quantity"
+            placeholder="Required Quantity"
+            onChange={handleChange}
+          />
 
-        <textarea
-          name="message"
-          placeholder="Additional Requirements"
-          rows="5"
-          onChange={handleChange}
-        />
+          <textarea
+            name="message"
+            placeholder="Additional Requirements"
+            rows="5"
+            onChange={handleChange}
+          />
 
-        <button type="submit">
-          Send Inquiry on WhatsApp
-        </button>
+          <button type="submit">
+            Send Inquiry on WhatsApp
+          </button>
 
-      </form>
+        </form>
 
-    </section>
+      </section>
+      <Footer />
+    </>
   );
 }
 

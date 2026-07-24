@@ -14,6 +14,8 @@ className="whatsapp"
 
 target="_blank"
 
+rel="noreferrer"
+
 >
 
 <FaWhatsapp/>

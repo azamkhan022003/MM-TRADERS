@@ -42,6 +42,7 @@ function Home() {
   <CTA/>
   <WhyChooseUs/>
   <AboutSection/>
+  <Testimonials/>
   <CTASection/>
   <WhatsappButton/>
   <Footer/>

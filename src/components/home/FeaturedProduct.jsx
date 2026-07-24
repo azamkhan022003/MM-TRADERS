@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./FeaturedProduct.css";
 import productImg from "../../assets/images/ms-steel.jpg";
 
@@ -23,9 +24,9 @@ function FeaturedProduct() {
             <li>Fast delivery across India</li>
           </ul>
 
-          <a href="/products" className="btn-primary">
+          <Link to="/products" className="btn-primary">
             View Products
-          </a>
+          </Link>
         </div>
       </div>
     </section>
