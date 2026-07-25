@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { saveOrder } from "../services/adminService";
 import "./InquiryPage.css";
 
 function InquiryPage() {
@@ -24,6 +25,17 @@ function InquiryPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    saveOrder({
+      name: form.name,
+      company: form.company,
+      phone: form.phone,
+      email: form.email,
+      city: form.city,
+      product: form.product,
+      quantity: form.quantity,
+      message: form.message,
+    });
 
     const text = `
 Hello,

@@ -6,6 +6,8 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 
+import { saveContact, saveOrder } from "../services/adminService";
+
 import "./Contact.css";
 
 function Contact() {
@@ -23,6 +25,23 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (form.product && form.product.trim() !== "") {
+      saveOrder({
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        product: form.product,
+        message: form.message,
+      });
+    } else {
+      saveContact({
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        message: form.message,
+      });
+    }
+
     const text = `Hello MM Traders,\n\nName: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\nProduct: ${form.product}\nMessage: ${form.message}`;
     window.open(
       `https://wa.me/918103326129?text=${encodeURIComponent(text)}`,

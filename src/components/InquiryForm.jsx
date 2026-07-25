@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./InquiryForm.css";
 import emailjs from "@emailjs/browser";
+import { saveOrder } from "../services/adminService";
 
 function InquiryForm({ product }) {
   const [form, setForm] = useState({
@@ -20,6 +21,15 @@ function InquiryForm({ product }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    saveOrder({
+      name: form.name,
+      email: form.email,
+      phone: form.phone,
+      city: form.city,
+      product: product?.name || "Steel Product",
+      quantity: form.quantity,
+    });
 
     emailjs
       .send(
@@ -57,6 +67,16 @@ Required Quantity: ${form.quantity}
   };
 
   const sendWhatsApp = () => {
+    saveOrder({
+      name: form.name || "WhatsApp User",
+      email: form.email,
+      phone: form.phone,
+      city: form.city,
+      product: product?.name || "Steel Product",
+      quantity: form.quantity,
+      message: "Requested quotation on WhatsApp",
+    });
+
     const message = `Hello,
 
 I am interested in:

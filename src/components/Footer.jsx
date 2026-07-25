@@ -44,6 +44,8 @@ function Footer() {
 
           <Link to="/contact">Contact</Link>
 
+          <Link to="/admin">Admin Portal</Link>
+
         </div>
 
         {/* Products */}

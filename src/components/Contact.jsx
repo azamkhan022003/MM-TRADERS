@@ -1,5 +1,6 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { saveContact } from "../services/adminService";
 import "./Contact.css";
 
 function Contact() {
@@ -20,6 +21,14 @@ function Contact() {
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    // Save to admin database
+    saveContact({
+      name: form.name,
+      email: form.email,
+      phone: form.phone,
+      message: form.message,
+    });
 
     emailjs
       .send(
